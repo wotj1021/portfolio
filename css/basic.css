@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/*common*/
+* { box-sizing:border-box;}
+html {background: #ffffff;}
+body {font-size: 16px; width: 100%; overflow-x: hidden; color:#101820;}
+a { color: inherit;}
+img {width: 100%; display: block;}
+.clear_fix:after {content: ''; display: block; clear: both; margin-bottom: 50px;}
+
+/* div#header_box_empty {background: #FEE71500; width: 100%; content: ""; display: block; background: linear-gradient(0deg, rgba(254,231,21,1) 0%, rgba(0,0,0,0) 01%);} */
+div#header_box_empty {background: #FEE71500; width: 100%; content: ""; display: block;}
+
+div#contact_menu {background: #000a; display: none; position: fixed; top: 0; z-index: 9000; width: 100%; height: 100vh;}
+div#contact_menu h2 {color: #FEE715; display: none; text-align: center; font-size: 4em; z-index: 9999; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+div#contact_menu h2:first-child {display: none;}
+div#contact_menu h2:nth-child(2) {display: none;}
+div#contact_menu h2:last-child {display: none;}
+
+header {margin: 0; padding: 0; background: #FEE715; overflow: hidden; top: 0; position: fixed; z-index: -9999;}
+    #main_img {width: 1440px; left: 50%; top: 50%; transform: translate(-50%, -55%); position: relative; height: 720px;}
+    #main_img img {width: 240px; padding: 5px; position: absolute; transform: translate(-50%, -50%);}
+    #main_img img:nth-child(1) {top: 360px; left: 0px;}
+    #main_img img:nth-child(2) {top: 380px; left: 240px;}
+    #main_img img:nth-child(3) {top: 200px; left: 240px;}
+    #main_img img:nth-child(4) {top: 200px; left: 480px;}
+    #main_img img:nth-child(5) {top: 590px; left: 240px;}
+    #main_img img:nth-child(6) {top: 510px; left: 0720px;}
+    #main_img img:nth-child(7) {top: 660px; left: 0px;}
+    #main_img img:nth-child(8) {top: 560px; left: 480px;}
+    #main_img img:nth-child(9) {top: 150px; left: 720px;}
+    #main_img img:nth-child(10) {top: 250px; left: 960px;}
+    #main_img img:nth-child(11) {top: 50px; left: 960px;}
+    #main_img img:nth-child(12) {top: 550px; left: 960px;}
+    #main_img img:nth-child(13) {top: 30px; left: 0px;}
+    #main_img img:nth-child(14) {top: 30px; left: 240px;}
+    #main_img img:nth-child(15) {top: 110px; left: 1200px;}
+    #main_img img:nth-child(16) {top: 230px; left: 1440px;}
+    #main_img img:nth-child(17) {top: 350px; left: 1200px;}
+    #main_img img:nth-child(18) {top: -30px; left: 720px;}
+    #main_img img:nth-child(19) {top: 590px; left: 1200px;}
+    #main_img img:nth-child(20) {top: 600px; left: 1440px;}
+    #main_img img:nth-child(21) {top: 150px; left: 720px;}
+
+    #title {margin: 0 auto; width: 100%; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%);}
+    #title h1 {text-align: center;}
+
+article#contect_bar {width: 100%; color: #ffeecc; height: 80px; line-height: 80px; z-index: 9000; background:#101820;}
+    #contect_bar h2 {float: left; margin-left: 20px;}
+    #contect_bar a:hover {color: #FEE715; transition: 1.5s;}
+    #contect_bar ul {float: right;}
+    #contect_bar li {float: left;  margin-right: 20px;}
+    #contect_bar li:hover {color: #FEE715; transition: 1.5s; cursor: pointer;}
+
+article#empty_box {background:#101820;}
+article#empty_box.active_empty {width: 100%; height: 80px; display: block; background: #f00;}
+
+@keyframes spin {
+    /* 0% {transform: rotate(-90deg);} */
+    /* 30% {transform: rotate(40deg);} */
+    /* 100% {transform: rotate(0deg);} */
+   }
+
+article#viewpoint {background: #fff;  width: 100%; position: relative; overflow: hidden;}
+    #viewpoint #buttons {cursor: pointer; z-index: 10; position: absolute; color:#2b3f53; font-size: 70px; left: 300px; transform: translate(-50%, -50%);}
+    #viewpoint #buttons:hover {cursor: pointer;}
+        #buttons.prev {top: 45%;}
+        #buttons.next {top: 53%;}
+
+    section#main_loop {cursor: pointer; position: absolute; z-index: 1; width: 550px; height: 550px; left: -500px; top: calc(50% - 275px); border-radius: 50%; animation: spin 3s; } 
+    #main_loop .loop_card {position: absolute; width: 192px; display: block; height: 108px; padding: 20px; border: 1px solid #0003;}
+    #main_loop #loop_card1 {background: #000; top: calc(50% - 54px); left: calc(99%); transform: rotate(0deg); color:#2b3f53;}
+    #main_loop #loop_card2 {background: #FEE715; top: calc(65.5%); left: calc(111.5% - 96px); transform: rotate(22.5deg);}
+    #main_loop #loop_card3 {background: #FEE715; top: calc(87%); left: calc(97% - 96px); transform: rotate(45deg);}
+    #main_loop #loop_card4 {background: #FEE715; top: calc(101.3%); left: calc(75.5% - 96px); transform: rotate(67.5deg);}
+    #main_loop #loop_card5 {background: #FEE715; top: calc(106.5%); left: calc(50% - 96px); transform: rotate(90deg);}
+    #main_loop #loop_card6 {background: #FEE715; top: calc(101.4%); left: calc(24.4% - 96px); transform: rotate(112.5deg);}
+    #main_loop #loop_card7 {background: #fe1595; top: calc(87%); left: calc(3% - 96px); transform: rotate(135deg);}
+    #main_loop #loop_card8 {background: #fe1595; top: calc(65.5%); left: calc(-11.5% - 96px); transform: rotate(157.5deg);}
+    #main_loop #loop_card9 {background: #fe1595; top: calc(49.9% - 54px); left: -186px; transform: rotate(180deg);}
+    #main_loop #loop_card10 {background: #fe1595; top: calc(14.9%); left: calc(-11.5% - 96px); transform: rotate(202.5deg);}
+    #main_loop #loop_card11 {background: #fe1595; top: calc(-6.6%); left: calc(3% - 96px); transform: rotate(225deg);}
+    #main_loop #loop_card12 {background: #1519fe; top: calc(-21%); left: calc(24.4% - 96px); transform: rotate(247.5deg);}
+    #main_loop #loop_card13 {background: #1519fe; top: calc(-26.2%); left: calc(50% - 96px); transform: rotate(270deg);}
+    #main_loop #loop_card14 {background: #1519fe; top: calc(-21%); left: calc(75.5% - 96px); transform: rotate(292.5deg);}
+    #main_loop #loop_card15 {background: #1519fe; top: calc(-6.6%); left: calc(97% - 96px); transform: rotate(315deg);}
+    #main_loop #loop_card16 {background: #1519fe; top: calc(14.9%); left: calc(111.5% - 96px); transform: rotate(337.5deg);}
+
+    section#main_view {position: relative; top: 0; left: 0px; right: 0px; background: #0000; height: 100%; overflow: hidden;}
+            .main_card {position: relative; height: 100%; width: 100%; display: none; }
+
+            @keyframes logo_wave{
+                0%, 100% {clip-path: polygon(0% 45%, 12% 38%, 27% 42%, 46% 51%, 62% 57%, 78% 54%, 100% 48%, 100% 100%, 0% 100%);}
+                50%  {clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);}
+            }
+            #main_card1 {background: #000; display: block;}
+            #main_card1 .maincard_logo {background: #0f00;}
+                .maincard_logo h2 { font-size: 8em; position: absolute; /*-webkit-box-reflect: below -42px linear-gradient(transparent, #FEE715);*/ transform: translate(-50%, -60%); top: 50%; left: 50%;}
+                .maincard_logo h2:nth-child(1) {color: transparent; -webkit-text-stroke: 2px #FEE715;}
+                .maincard_logo h2:nth-child(2) {color: #fee715e0; animation: logo_wave 3s ease-in-out infinite;}
+
+            .card_pofile {left: 330px; right: 0; background: #0000;}
+            .card_pofile img {width: 37%; position: absolute; left: 50%; top: 50%; transform: translate(-100%, -50%);}
+            .card_pofile .text {background: #fff; position: absolute; top: 58%; padding: 20px; padding-top: 45px; height: 500px; line-height: 50px;  left: 50%; transform: translate(-20%, -50%);}
+            .text p {font-size: 30px;}
+                .text h2 {font-size: 60px;}
+                .text h2:after {display: block; width: 110%; margin: 10px 0; background: #FEE715; height: 5px; content: "";}
+                .text h2 span {font-size: 40px; color: #444;}
+
+            .card_skill {background: #0ff0; left: 330px; right: 0;}
+                #skill {}
+                    .items {margin: 0 auto; width: 60%; position: absolute; top: 40%; left: 50%; transform: translate(-70%, -50%); padding-bottom: 30px; text-align: center;}
+                        .item {width: 170px; margin-right: 30px; display: inline-block; overflow: hidden; margin-top: 30px; position: relative; border: 1px solid #fd05; border-radius: 100%;}
+                        .item:last-child {margin-right: 0;}
+                        .item img {width: 170px;}
+                        .item p {padding: 5px 0; background: #FEE715; position: absolute; top: 50%; left: 100%; transform: translate(0%, -50%); width: 100%;}
+
+            .card_wave canvas {width: 100%; height: 100%;}
+
+            /* @keyframes bigger {
+                0% {transform: scale(0.1)}
+                100% {transform: scale(1.5)}
+            } */
+            .card_dot {background: #000; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+                .dot_box {display: flex; align-items: center; flex-wrap: wrap; justify-content: center; width: 450px;}
+                .circle {transition: 2s; position: relative; cursor: pointer; background: #FEE715; height: 14px; width: 14px; margin: 8px; border-radius: 50%; }
+                .circle:hover {transform: scale(2); box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0, 0 0 80px #0f0, 0 0 100px #0f0; transition: 0s; }
+                .circle.grow {transform: scale(2); transition: transform 0.6s linear;}
+
+            @keyframes cubic-move{
+                0% {left: 0;}
+                50% {left: 70%;}
+                100% {left: 0;}
+            }
+            
+            .card_draw {}
+            .card_draw h3 {text-align: center; margin: 30px; font-size: 3em;}
+            .card_draw div p {font-size: 2em; vertical-align: middle; width: 100px; margin: 0 auto;}
+            .card_draw div p:hover {cursor: pointer;}
+            .card_draw div p#cubic-start {margin-top: 30px;}
+            .card_draw div p#cubic-stop {margin-bottom: 30px;}
+            .card_draw div#timing-control {position: relative; left: 330px; padding-top: 30px;}
+            .card_draw div#timing-control input {outline: none; padding: 10px;}
+            .card_draw div#timing-control input#set_cubic {outline: none; margin-right: 10px;}
+            .card_draw div#timing-control input#button_cubic {outline: none; border: none;  background: #FEE715; padding: 10px;}
+            .card_draw div#timing-control input#button_cubic {cursor: pointer;}
+            .card_draw #cubic_all {position: relative; left: 330px; right: 0; width: 100%; margin-top: 10px;}
+                #cubic_all .cubic {margin-bottom: 10px; position:relative; left:0; width:150px; border: 1px solid #000; background:#FEE715; color:black; text-align:center; padding:5px 0;}
+                #cubic_all .addCubic {animation-name:cubic-move; animation-iteration-count: infinite;  animation-duration: 5s; }
+                #cubic_all #cubic_1 {animation-timing-function: ease;}
+                #cubic_all #cubic_2 {animation-timing-function: ease-out;}
+                #cubic_all #cubic_3 {animation-timing-function: ease-in;}
+                #cubic_all #cubic_4 {animation-timing-function: ease-in-out;}
+                #cubic_all #cubic_5 {animation-timing-function: step-start;}
+                #cubic_all #cubic_6 {animation-timing-function: step-end;}
+                #cubic_all #cubic_7 {animation-timing-function: ease; /* animation: cubic-move 5s cubic-bezier(0,2.23,.06,.1) 0 infinite */}
+                /* #cubic_all #cubic_7 {animation-iteration-count: forward;} */
+
+            /* .card_pofile {left: 330px; right: 0; background: #0000;}
+            .card_pofile img {width: 37%; position: absolute; left: 50%; top: 50%; transform: translate(-100%, -50%);}
+            .card_pofile .text {background: #fff; position: absolute; top: 58%; padding: 20px; padding-top: 45px; height: 500px; line-height: 50px;  left: 50%; transform: translate(-20%, -50%);} */
+            /* #main_card7 .text h2:after {background: #fe1595;}
+
+            #main_card8 .item {border: 1px solid #fe1595;}
+            #main_card8 .item p {background: #fe1595;}
+            
+            #main_card9 {}
+
+            #main_card10 {}
+
+            #main_card11 div#timing-control input#button_cubic {outline: none; border: none;  background: #fe1595; padding: 10px;}
+            #main_card11 .cubic {background: #fe1595;}
+
+            #main_card12 .text h2:after {background: #1519fe;}
+
+            #main_card13 .item {border: 1px solid #1519fe;}
+            #main_card13 .item p {background: #1519fe;}
+
+            #main_card14 {}
+            
+            #main_card15 {}
+            
+            #main_card16 div#timing-control input#button_cubic {outline: none; border: none;  background: #1519fe; padding: 10px;}
+            #main_card16 .cubic {background: #1519fe;;} */
+
+    section#page_view {width: 100%; background: #fff; overflow: hidden;}
+    section#page_view .page_card {display: flex; flex-direction: column; width: 25%; float: left; overflow: hidden;}
+    section#page_view .page_card div {width: 100%; overflow: hidden;}
+    section#page_view .page_card:hover {transform: scale(1.05); transition: 1s ease; cursor: pointer;}
+            #page_top {}
+            #page_bottom {color: #000a; padding: 40px;}
+            #page_bottom h3 {margin-bottom: 7px; color: #0008;}
+            #page_bottom p {font-size: 2em; margin-bottom: 10px;}
+            #page_bottom #top_title {}
+            #page_bottom #bottom_title {}
+            #page_bottom #top_description {}
+            #page_bottom #bottom_description {}
+
+        #page_1 {}
+        #page_1 #page_top {background: #f6e58d;}
+        #page_1 #page_bottom {background: #f9ca24;}
+
+        #page_2 {}
+        #page_2 #page_top {background: #ffbe76;}
+        #page_2 #page_bottom {background: #f0932b;}
+
+        #page_3 {}
+        #page_3 #page_top {background: #ff7979;}
+        #page_3 #page_bottom {background: #eb4d4b;}
+
+        #page_4 {}
+        #page_4 #page_top {background: #badc58;}
+        #page_4 #page_bottom {background: #6ab04c;}
+
+        #page_5 {}
+        #page_5 #page_top {background: #7ed6df;}
+        #page_5 #page_bottom {background: #22a6b3;}
+
+        #page_6 {}
+        #page_6 #page_top {background: #e056fd;}
+        #page_6 #page_bottom {background: #be2edd;}
+
+        #page_7 {}
+        #page_7 #page_top {background: #686de0;}
+        #page_7 #page_bottom {background: #4834d4;}
+
+        #page_8 {}
+        #page_8 #page_top {text-align: center;  background: #95afc0;}
+        #page_8 #page_top h2 {}
+        #page_8 #page_bottom {background: #535c68;}
